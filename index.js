@@ -145,7 +145,12 @@ slider2.addEventListener('mousemove', () => {
 let slider3 = document.getElementById('inp3');
 slider3.addEventListener('mousemove', () => {
     let val3 = slider3.value;
-    let tabl = document.getElementById('tabl');
-    let polz = document.getElementById('polz');
     slider3.style.background = `linear-gradient(90deg, rgb(199, 6, 6) ${val3}%, white ${val3}%)`;
+})
+
+
+let slider4 = document.getElementById('inp4');
+slider4.addEventListener('mousemove', () => {
+    let val4 = slider4.value;
+    slider4.style.background = `linear-gradient(90deg, rgb(35, 35, 200) ${val4}%, white ${val4}%)`
 })
