@@ -1,4 +1,4 @@
-let slider1 = document.getElementById('inp1');
+const slider1 = document.getElementById('inp1');
 slider1.addEventListener('mousemove', () => {
     let val = slider1.value;
     slider1.style.background = `linear-gradient(90deg, green ${val}%, white ${val}%)`;
@@ -37,7 +37,7 @@ let dv18 = document.getElementById('18');
 let dv19 = document.getElementById('19');
 let dv20 = document.getElementById('20');
 
-let slider2 = document.getElementById('inp2');
+const slider2 = document.getElementById('inp2');
 slider2.addEventListener('mousemove', () => {
     let val2 = slider2.value;
     slider2.style.background = `linear-gradient(90deg, rgb(80, 149, 240) ${val2}%, white ${val2}%)`
@@ -142,15 +142,77 @@ slider2.addEventListener('mousemove', () => {
         dv20.style.backgroundColor = 'gray';
 })
 
-let slider3 = document.getElementById('inp3');
+const slider3 = document.getElementById('inp3');
 slider3.addEventListener('mousemove', () => {
     let val3 = slider3.value;
     slider3.style.background = `linear-gradient(90deg, rgb(199, 6, 6) ${val3}%, white ${val3}%)`;
 })
 
+for(let i = 0; i < 8; i++){
+    let div = document.createElement('div');
+    div.id = `miniBl${i}`;
+    div.style.height = '22px';
+    div.style.width = '7px';
+    div.style.borderRadius = '2px';
+    div.style.boxShadow = '0px 3px 6px rgba(0, 0, 0, 0.3)';
+    if(i < 4)
+        div.style.backgroundColor = 'blue';
+    else
+        div.style.backgroundColor = 'white';
+    document.getElementById('contein').appendChild(div);
+}
 
-let slider4 = document.getElementById('inp4');
+let div0 = document.getElementById('miniBl0');
+let div1 = document.getElementById('miniBl1');
+let div2 = document.getElementById('miniBl2');
+let div3 = document.getElementById('miniBl3');
+let div4 = document.getElementById('miniBl4');
+let div5 = document.getElementById('miniBl5');
+let div6 = document.getElementById('miniBl6');
+let div7 = document.getElementById('miniBl7');
+
+const slider4 = document.getElementById('inp4');
 slider4.addEventListener('mousemove', () => {
     let val4 = slider4.value;
-    slider4.style.background = `linear-gradient(90deg, rgb(35, 35, 200) ${val4}%, white ${val4}%)`
-})
+    slider4.style.background = `linear-gradient(90deg, blue ${val4}%, white ${val4}%)`;
+    
+    if(val4 >= 1)
+        div0.style.backgroundColor = 'blue';
+    else
+        div0.style.backgroundColor = 'white';
+
+    if(val4 >= 15)
+        div1.style.backgroundColor = 'blue';
+    else
+        div1.style.backgroundColor = 'white';
+
+    if(val4 >= 29)
+        div2.style.backgroundColor = 'blue';
+    else
+        div2.style.backgroundColor = 'white';
+
+    if(val4 >= 43)
+        div3.style.backgroundColor = 'blue';
+    else
+        div3.style.backgroundColor = 'white';
+
+    if(val4 >= 57)
+        div4.style.backgroundColor = 'blue';
+    else
+        div4.style.backgroundColor = 'white';
+
+    if(val4 >= 71)
+        div5.style.backgroundColor = 'blue';
+    else
+        div5.style.backgroundColor = 'white';
+    
+    if(val4 >= 85)
+        div6.style.backgroundColor = 'blue';
+    else
+        div6.style.backgroundColor = 'white';
+    
+    if(val4 >= 98)
+        div7.style.backgroundColor = 'blue';
+    else
+        div7.style.backgroundColor = 'white';
+});
